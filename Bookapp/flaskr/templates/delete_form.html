@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta character=" UTF-8">
+        <title> bookapp </title>
+        <link rel ="stylesheet" href="{{url_for ('static', filename='style.css')}}">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        #back-home {
+            display: inline-block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+    <h1>Delete a Book</h1>
+    <form action="{{ url_for('delete_confirm') }}" method="post">
+        <label for="book">Select a book to delete:</label>
+        <select name="book" id="book">
+            {% for book in all_books %}
+                <option value="{{ book[0] }}">{{ book[0] }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Confirm">
+    </form>
+    <a id="back-home" href="{{ url_for('index') }}">Back to Home</a>
+</body>
+
+</html>

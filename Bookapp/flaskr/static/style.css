@@ -1,0 +1,27 @@
+h1{
+    position: relative;
+    color: white;
+    background: linear-gradient(135deg,#1FA3AF,#746586);
+    padding: 0.2em 0.2em;
+    border-radius: 10px;
+}
+h2{
+    color: white;
+}
+
+.book {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+}
+body {
+    background-color: #26282e;
+    color: white;
+}
+h3{
+    margin: 0;
+}
